@@ -10,6 +10,14 @@ const initiatives = [
   { icon: ArrowUpRight, title: 'Digital Fundraising', copy: 'Digital campaigns mobilize support for feeding initiatives and rescue efforts.' },
   { icon: HeartHandshake, title: 'Shelter Partnerships', copy: 'Local shelters help coordinate care, referrals, and ongoing rescue support.' },
 ]
+const archiveImages = [
+  { src: '/archive-rescue-cat.png', alt: 'Rescued cat receiving veterinary care' },
+  { src: '/archive-care-cat.png', alt: 'Cat receiving care beside a food bowl' },
+  { src: '/archive-feeding-dogs.png', alt: 'Dogs gathered around a feeding program' },
+  { src: '/archive-feeding-group.png', alt: 'Community feeding program for dogs' },
+  { src: '/archive-feeding-pack.png', alt: 'Dogs being fed outdoors' },
+  { src: '/archive-recovery-cat.png', alt: 'Recovering cat receiving veterinary care' },
+]
 
 function SectionLabel({ children }: { children: React.ReactNode }) { return <p className="section-label">{children}</p> }
 
@@ -30,7 +38,7 @@ export default function Page() {
 
       <section id="initiatives" className="section reveal"><SectionLabel>03 / Initiatives</SectionLabel><h2>What we do</h2><div className="initiative-grid">{initiatives.map(({icon: Icon,title,copy}) => <article className="initiative" key={title}><Icon aria-hidden="true" /><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
 
-      <section id="rescues" className="section rescue-section reveal"><SectionLabel>04 / Archive</SectionLabel><div className="split heading-split"><h2>A mixed archive<br />of what we do.</h2><p className="lead">A visual record of PureBowl&apos;s rescues, feeding programs, and community work. New moments from our campaigns will be added here.</p></div><div className="rescue-grid">{[1,2,3,4,5,6].map((n) => <article className="rescue-card" key={n}><div className="placeholder"><PawPrint aria-hidden="true" /></div></article>)}</div></section>
+      <section id="rescues" className="section rescue-section reveal"><SectionLabel>04 / Archive</SectionLabel><div className="split heading-split"><h2>A mixed archive<br />of what we do.</h2><p className="lead">A visual record of PureBowl&apos;s rescues, feeding programs, and community work. New moments from our campaigns will be added here.</p></div><div className="rescue-grid">{archiveImages.map(({ src, alt }) => <article className="rescue-card" key={src}><div className="placeholder"><img src={src} alt={alt} /></div></article>)}</div></section>
 
       <section id="donate" className="section donate-section reveal"><SectionLabel>05 / Donate</SectionLabel><div className="split heading-split"><div><h2>Help us keep bowls full.</h2><p className="lead">Your contribution gives stray animals access to food, care, and a better chance at safety.</p></div><div><p>Every donation directly supports PureBowl&apos;s feeding programs and rescue efforts. A small act of generosity can become a meal, treatment, or a second chance for an animal in need.</p><div className="donation-instructions"><span>To donate</span><strong>Send your contribution to +8801714393276</strong><p>Use <strong>bKash</strong> or <strong>Nagad</strong>, and write <strong>&apos;Donation&apos;</strong> in the reference section when paying.</p><p>We will share the latest photos from our next campaign, showing how your support was put to work.</p></div></div></div></section>
 
