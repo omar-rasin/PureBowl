@@ -15,8 +15,6 @@ function SectionLabel({ children }: { children: React.ReactNode }) { return <p c
 
 export default function Page() {
   const [open, setOpen] = useState(false)
-  const [sent, setSent] = useState(false)
-  function submit(e: React.FormEvent<HTMLFormElement>) { e.preventDefault(); setSent(true) }
   return (
     <main>
       <header className="site-nav" data-open={open}>
@@ -32,7 +30,7 @@ export default function Page() {
 
       <section id="initiatives" className="section reveal"><SectionLabel>03 / Initiatives</SectionLabel><h2>What we do</h2><div className="initiative-grid">{initiatives.map(({icon: Icon,title,copy}) => <article className="initiative" key={title}><Icon aria-hidden="true" /><h3>{title}</h3><p>{copy}</p></article>)}</div></section>
 
-      <section id="rescues" className="section rescue-section reveal"><SectionLabel>04 / Rescues</SectionLabel><div className="split heading-split"><h2>38 rescues.<br />38 stories.</h2><p className="lead">A growing archive of rescue documentation, ready to be filled with the real stories of animals and people PureBowl has supported.</p></div><div className="rescue-grid">{[1,2,3,4,5,6].map((n) => <article className="rescue-card" key={n}><div className="placeholder"><PawPrint aria-hidden="true" /></div><div className="rescue-meta"><span>Rescue #{String(n).padStart(2,'0')}</span><small>Documentation coming soon</small></div></article>)}</div></section>
+      <section id="rescues" className="section rescue-section reveal"><SectionLabel>04 / Archive</SectionLabel><div className="split heading-split"><h2>A mixed archive<br />of what we do.</h2><p className="lead">A visual record of PureBowl&apos;s rescues, feeding programs, and community work. New moments from our campaigns will be added here.</p></div><div className="rescue-grid">{[1,2,3,4,5,6].map((n) => <article className="rescue-card" key={n}><div className="placeholder"><PawPrint aria-hidden="true" /></div></article>)}</div></section>
 
       <section id="donate" className="section donate-section reveal"><SectionLabel>05 / Donate</SectionLabel><div className="split heading-split"><div><h2>Help us keep bowls full.</h2><p className="lead">Your contribution gives stray animals access to food, care, and a better chance at safety.</p></div><div><p>Every donation directly supports PureBowl&apos;s feeding programs and rescue efforts. A small act of generosity can become a meal, treatment, or a second chance for an animal in need.</p><div className="donation-instructions"><span>To donate</span><strong>Send your contribution to +8801714393276</strong><p>Use <strong>bKash</strong> or <strong>Nagad</strong>, and write <strong>&apos;Donation&apos;</strong> in the reference section when paying.</p><p>We will share the latest photos from our next campaign, showing how your support was put to work.</p></div></div></div></section>
 
@@ -42,7 +40,7 @@ export default function Page() {
 
       <section className="trust reveal"><SectionLabel>08 / Transparency</SectionLabel><h2>Built on trust.</h2><div className="trust-grid">{[['Volunteer-led','Operations are organized through a volunteer network.'],['Community-powered','Fundraising and support come from digital campaigns and community participation.'],['Impact-focused','Resources are directed toward feeding and rescue efforts.']].map(([title,copy]) => <div key={title}><h3>{title}</h3><p>{copy}</p></div>)}</div></section>
 
-      <section id="contact" className="section contact reveal"><SectionLabel>09 / Contact</SectionLabel><div className="split"><div><h2>Get involved.</h2><p className="lead">Whether you want to volunteer, support a fundraiser, collaborate on a rescue, or learn more about PureBowl, we&apos;d love to hear from you.</p><div className="contact-links"><a href="#contact">Volunteer <ArrowUpRight /></a><a href="#contact">Partner <ArrowUpRight /></a><a href="#contact">Support <ArrowUpRight /></a></div></div><form onSubmit={submit}><label>Name<input required name="name" /></label><label>Email<input required type="email" name="email" /></label><label>Reason for contacting<select required name="reason" defaultValue=""><option value="" disabled>Select one</option><option>Volunteer</option><option>Partner</option><option>Support</option><option>Learn more</option></select></label><label>Message<textarea required name="message" rows={4} /></label><button type="submit">{sent ? 'Message ready to send' : 'Send message'} <ArrowUpRight /></button>{sent && <p className="form-note" role="status">Thanks — your message has been prepared. Connect a contact destination to enable delivery.</p>}</form></div></section>
+      <section id="contact" className="section contact reveal"><SectionLabel>09 / Contact</SectionLabel><div className="split"><div><h2>Get in touch.</h2><p className="lead">For questions, partnership opportunities, rescue coordination, or to learn more about PureBowl, please email us directly.</p></div><div className="contact-email"><span>Email us at</span><a href="mailto:purebowl24@gmail.com">purebowl24@gmail.com <ArrowUpRight /></a></div></div></section>
 
       <footer><span className="wordmark">PureBowl</span><span>© 2026 PureBowl. All rights reserved.</span><span>Feeding. Rescuing. Protecting.</span></footer>
     </main>
