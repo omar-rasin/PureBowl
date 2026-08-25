@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { ArrowDown, ArrowUpRight, HeartHandshake, Menu, PawPrint, ShieldCheck, Utensils, X } from 'lucide-react'
 
-const nav = [['About','about'],['Impact','impact'],['Initiatives','initiatives'],['Rescues','rescues'],['Donate','donate'],['Contact','contact']]
+const nav = [['About','about'],['Impact','impact'],['Initiatives','initiatives'],['Archives','rescues'],['Donate','donate'],['Contact','contact']]
 const initiatives = [
   { icon: Utensils, title: 'Feeding Programs', copy: 'Recurring food distribution provides stray animals with consistent access to food and water.' },
   { icon: PawPrint, title: 'Rescue Coordination', copy: 'Urgent cases are coordinated with appropriate local resources and animal welfare partners.' },
@@ -40,7 +40,7 @@ export default function Page() {
 
       <section className="trust reveal"><SectionLabel>08 / Transparency</SectionLabel><h2>Built on trust.</h2><div className="trust-grid">{[['Volunteer-led','Operations are organized through a volunteer network.'],['Community-powered','Fundraising and support come from digital campaigns and community participation.'],['Impact-focused','Resources are directed toward feeding and rescue efforts.']].map(([title,copy]) => <div key={title}><h3>{title}</h3><p>{copy}</p></div>)}</div></section>
 
-      <section id="contact" className="section contact reveal"><SectionLabel>09 / Contact</SectionLabel><div className="split"><div><h2>Get in touch.</h2><p className="lead">For questions, partnership opportunities, rescue coordination, or to learn more about PureBowl, please email us directly.</p></div><div className="contact-email"><span>Email us at</span><a href="mailto:purebowl24@gmail.com">purebowl24@gmail.com <ArrowUpRight /></a></div></div></section>
+      <section id="contact" className="section contact reveal"><SectionLabel>09 / Contact</SectionLabel><div className="split"><div><h2>Get in touch.</h2><p className="lead">For questions, partnership opportunities, rescue coordination, or to learn more about PureBowl, please email us directly.</p></div><div className="contact-email"><span>Email us at: <strong>purebowl24@gmail.com</strong></span><p>Whatsapp: <strong>+8801722148791</strong></p></div></div></section>
 
       <footer><span className="wordmark">PureBowl</span><span>© 2026 PureBowl. All rights reserved.</span><span>Feeding. Rescuing. Protecting.</span></footer>
     </main>
