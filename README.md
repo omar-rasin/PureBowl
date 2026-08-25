@@ -1,33 +1,63 @@
 # PureBowl
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+A minimal, modern website for a grassroots animal welfare organization focused on feeding, rescuing, and protecting stray animals. Designed with a clean editorial aesthetic and high structural clarity
 
-## Built with v0
+---
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+## 📌 Overview
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_99wU9NqUChY2ZeRr8E91L5JT78SM)
+**PureBowl** was founded to organize volunteer-led animal welfare efforts, including feeding programs, rescue coordination, digital fundraising, and active collaboration with local animal shelters.
 
-## Getting Started
+The website reflects the core principle: **Let the work speak for itself.** Rather than overwhelming visitors with promotional clutter, the platform lets the organization's impact unfold naturally through strong typography, generous whitespace, and transparent metrics.
 
-First, run the development server:
+### Key Impact Metrics
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+| Metric | Achievement |
+| :--- | :--- |
+| **Active Volunteers** | `18 volunteers` |
+| **Digital Fundraising** | `$6,500+ raised` |
+| **Stray Animals Fed** | `2,400+ animals` |
+| **Rescues Coordinated** | `38 rescues` |
+| **Shelter Network** | `Local Animal Shelters` |
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎨 Design System & Visual Identity
 
-## Learn More
+The interface primarily uses white and navy blue, complemented by subtle gray borders and clean structural divisions.
 
-To learn more, take a look at the following resources:
+### Color Palette
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
+| Color Name | Hex Code | Visual Preview | Role |
+| :--- | :--- | :--- | :--- |
+| **Navy Blue** | `#0B1F3A` | `![#0B1F3A](https://via.placeholder.com/15/0B1F3A/0B1F3A.png)` | Primary Brand / Headers |
+| **Secondary Navy** | `#16365C` | `![#16365C](https://via.placeholder.com/15/16365C/16365C.png)` | Accent & Secondary Elements |
+| **White** | `#FFFFFF` | `![#FFFFFF](https://via.placeholder.com/15/FFFFFF/FFFFFF.png)` | Primary Background |
+| **Light Gray** | `#F5F7FA` | `![#F5F7FA](https://via.placeholder.com/15/F5F7FA/F5F7FA.png)` | Section & Card Backgrounds |
+| **Dark Text** | `#101828` | `![#101828](https://via.placeholder.com/15/101828/101828.png)` | Body Typography |
+
+### Key Principles
+
+- **Editorial Layouts:** Large, high-impact typography with intentional spacing.
+- **Restrained Visual Noise:** Minimal distractions to focus entirely on impact and documentation.
+- **Architectural Whitespace:** The homepage opens with a stark, minimal presentation centered on the organization's core tagline:
+  > **FEEDING. RESCUING. PROTECTING.**
+- **Accessibility First:** Semantic HTML, keyboard-friendly navigation, contrast compliance, and flexible touch targets.
+
+---
+
+## 🛠️ Architecture & Tech Stack
+
+Designed and generated using **v0 by Vercel**, the application relies on a modular React/Next.js architecture built for scalability and performance.
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router)
+- **UI Library:** [React](https://react.dev/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Iconography:** [Lucide React](https://lucide.dev/)
+
+---
+
+## 🧩 Component Breakdown
+
+The codebase is structured around modular, reusable UI sections to support easy updates:
